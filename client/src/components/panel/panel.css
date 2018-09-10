@@ -1,0 +1,20 @@
+Article{
+  width: 100vw;
+  max-width: 600px;
+  overflow: hidden;
+  margin: 21px 0
+}
+Article .panel-info{
+  padding: 0 8px;
+}
+
+Article img{
+  width: 100%;
+  height: auto;
+
+}
+
+a.panel-link {
+  width: 2em;
+  height: 2em;
+}
