@@ -15,10 +15,13 @@ class Panel extends Component {
         </div>
 
         <div className="panel-image" href="#">
-          <img src="https://picsum.photos/g/600/400/?random" alt=""/>
-          <div className="panel-links">
-          <a className="panel-link" href="#"><svg className="github"/></a>
-          </div>
+          <img src="https://picsum.photos/g/600/360/?random" alt=""/>
+        </div>
+        <div className="panel-links">
+          <a className="panel-link">A</a>
+          <a className="panel-link">A</a>
+          <a className="panel-link">A</a>
+          <a className="panel-link">A</a>
         </div>
 
       </article>

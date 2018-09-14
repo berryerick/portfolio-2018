@@ -8,15 +8,15 @@ class App extends Component {
       <div className="App">
 
         <header className="main-header">
-          <h1 className="main-title">Erick Berry</h1>
+          <h3 className="main-title">Erick Berry</h3>
         </header>
 
         <main className="">
+          <h2>Projects</h2>
           <Panel/>
           <Panel/>
           <Panel/>
           <Panel/>
-
         </main>
 
       </div>

@@ -7,19 +7,47 @@
   height: 80px;
 }
 
+main{
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .main-header {
   background-color: #777;
-  padding: 5px 13px;
+  padding: 8px 16px;
   color: white;
+  width: 100vw;
 }
 
 .main-title {
-  font-size: 1.5em;
-  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .intro-text {
   font-size: large;
+}
+
+h1{
+  font-size: 56px;
+  font-weight: 100;
+}
+h2{
+  font-size: 36px;
+  font-weight: normal;
+  padding: 0 16px;
+}
+h3{
+  font-size: 20px;
+  font-weight: lighter;
+}
+h4{
+  font-size: 12px;
+  font-weight: bold;
+}
+p{ font-size: 12px;}
+caption{
+  font-size: 12px;
 }
 
 @keyframes App-logo-spin {
