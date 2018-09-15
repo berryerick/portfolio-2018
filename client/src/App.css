@@ -1,56 +1,102 @@
-.App {
-  text-align: left;
+*{
+  --base-unit: 4px;
+  --mobile-text-margin: calc(2 * var(--base-unit));
+  --text-color: #444;
+  --primary-color: #356;
+  --secondary-color: #245;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  text-align: left;
+  width: 100%
+}
+
+.mobile-text{
+  padding: 0 var(--mobile-text-margin);
+  width: calc(100% - calc(2 * var(--mobile-text-margin)));
+  max-width: 600px;
+}
+
+@media only screen and (min-width: 608px){
+  .mobile-text{
+    padding: 0;
+    width: 100%;
+  }
 }
 
 main{
   max-width: 600px;
   margin: 0 auto;
+  color: var(--text-color);
 }
 
-.main-header {
-  background-color: #777;
-  padding: 8px 16px;
+header{
+  background-color: var(--primary-color);
   color: white;
-  width: 100vw;
+  height: calc(13 * var(--base-unit));
+  display: flex;
+  justify-content: center;
+}
+header h3{
+  /* margin-top: calc(3 *var(--base-unit)); */
+  margin: 0;
+  line-height: calc(13 * var(--base-unit));
+  /* line-height: calc(13 * var(--base-unit)); */
 }
 
-.main-title {
-  max-width: 600px;
-  margin: 0 auto;
+nav{
+  height: calc(8 * var(--base-unit));
+  background-color: var(--primary-color);
+  border-top: 1px solid var(--secondary-color);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+nav div.no-scroll{
+  width: 100%;
+  height: 100%;
+  padding-bottom: 20px;
+  box-sizing: content-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+nav ul{
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  overflow-x: show;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  line-height: calc(8 * var(--base-unit));
+  color: white;
+  text-decoration: none;
+  margin-right: calc(5 * var(--base-unit))
+}
+
+nav ul li a:hover{
+  color: #ccc
+}
+
+nav ul li a.active{
+
 }
 
 .intro-text {
   font-size: large;
 }
 
-h1{
-  font-size: 56px;
-  font-weight: 100;
-}
-h2{
-  font-size: 36px;
-  font-weight: normal;
-  padding: 0 16px;
-}
-h3{
-  font-size: 20px;
-  font-weight: lighter;
-}
-h4{
-  font-size: 12px;
-  font-weight: bold;
-}
-p{ font-size: 12px;}
-caption{
-  font-size: 12px;
-}
-
-@keyframes App-logo-spin {
+@keyframes load {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }

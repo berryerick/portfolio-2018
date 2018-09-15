@@ -8,12 +8,7 @@ class Panel extends Component {
   render() {
     return (
       <article className="panel">
-
-        <div className="panel-info">
-          <h3>panel header</h3>
-          <p>panel description</p>
-        </div>
-
+        <h3 className="mobile-text">panel header</h3>
         <div className="panel-image" href="#">
           <img src="https://picsum.photos/g/600/360/?random" alt=""/>
         </div>
@@ -23,6 +18,7 @@ class Panel extends Component {
           <a className="panel-link">A</a>
           <a className="panel-link">A</a>
         </div>
+        <p className="mobile-text">panel description</p>
 
       </article>
     )
