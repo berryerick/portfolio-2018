@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import Admin from '../Admin/Admin.js'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 
-class Login extends Component {
+class Register extends Component {
 
   constructor (props) {
     super(props);
@@ -50,34 +54,34 @@ class Login extends Component {
     this.setState({formValid: this.state.emailValid && this.state.passwordValid});
   }
 
-  render(){
+  render({match}){
     return(
-      <main>
-        <h2 className="mobile-text">Login</h2>
-        <article className="Panel">
-          <form action="" method="post">
-            <h3>Create a new project</h3>
-            <div className="input-module">
-              <label htmlFor="project-title">Email</label>
-              <input type="text" name="project-title"></input>
-            </div>
+      <article className Panel>
+        <form action="" method="post">
+          <h3>Register</h3>
+          <Link to={`${match.url}/login`}>Login</Link>
+          <div className="input-module">
+            <label htmlFor="email">Email</label>
+            <input type="text" name="email"></input>
+          </div>
 
-            <div className="input-module">
-              <label htmlFor="project-title">Password</label>
-              <input type="text" name="project-title"></input>
-            </div>
+          <div className="input-module">
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password"></input>
+          </div>
 
-            <button type="submit">Submit</button>
+          <div className="input-module">
+            <label htmlFor="confirm_password">Confirm password</label>
+            <input type="password" name="confirm_password"></input>
+          </div>
 
-          </form>
-        </article>
-        <article>
-          <Admin/>
-        </article>
-      </main>
+          <button type="submit">Submit</button>
+
+        </form>
+      </article>
     )
   }
 
 }
 
-export default Login
+export default Register

@@ -8,7 +8,7 @@ import {
 import './App.css';
 import '../../resources/typebase.css';
 import Panel from '../Panel/Panel.js'
-import Login from '../Login/Login.js'
+import Admin from '../Admin/Admin.js'
 
 const Home = () => (
   <main className="">
@@ -45,7 +45,7 @@ class App extends Component {
           </nav>
 
           <Route exact path="/" component={Home}/>
-          <Route path="/admin" component={Login}/>
+          <Route path="/admin" component={Admin}/>
 
         </div>
       </Router>

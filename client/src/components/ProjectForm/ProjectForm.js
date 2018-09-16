@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Admin from '../Admin/Admin.js'
 
 
-class Login extends Component {
+class ProjectForm extends Component {
 
   constructor (props) {
     super(props);
@@ -52,32 +52,41 @@ class Login extends Component {
 
   render(){
     return(
-      <main>
-        <h2 className="mobile-text">Login</h2>
-        <article className="Panel">
-          <form action="" method="post">
-            <h3>Create a new project</h3>
-            <div className="input-module">
-              <label htmlFor="project-title">Email</label>
-              <input type="text" name="project-title"></input>
-            </div>
+      <article>
+        <form action="" method="post">
+          <h3>Create a new project</h3>
+          <div className="input-module">
+            <label htmlFor="project-title">Project Title</label>
+            <input type="text" name="project-title"></input>
+          </div>
 
-            <div className="input-module">
-              <label htmlFor="project-title">Password</label>
-              <input type="text" name="project-title"></input>
-            </div>
+          <div className="input-module">
+            <label htmlFor="project-description">Description</label>
+            <textarea name="project-description"></textarea>
+          </div>
 
-            <button type="submit">Submit</button>
+          <div className="input-module">
+            <label htmlFor="project-title">Category</label>
+            <select class="" name="">
+              <option class="" value="option">Web</option>
+              <option class="" value="option">Industrial</option>
+              <option class="" value="option">Personal</option>
+              <option class="" value="option">Thoughts</option>
+            </select>
+          </div>
 
-          </form>
-        </article>
-        <article>
-          <Admin/>
-        </article>
-      </main>
+          <div className="input-module">
+            <label htmlFor="project-title">Project Title</label>
+            <input type="text" name="project-title"></input>
+          </div>
+
+          <button type="submit">Submit</button>
+
+        </form>
+      </article>
     )
   }
 
 }
 
-export default Login
+export default ProjectForm

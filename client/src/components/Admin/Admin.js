@@ -1,96 +1,23 @@
 import React, { Component } from 'react';
+import Register from '../Register/Register'
+import Login from '../Login/Login'
 
-class Admin extends Component {
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Switch
+} from 'react-router-dom'
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: '',
-      description: '',
-      image: '',
-      category: '',
-      links: '',
-      formErrors: '',
-      titleValid: '',
-      descriptionValid: '',
-      imageValid: '',
-      categoryValid: '',
-      linksValid: '',
-    }
-  }
+function Admin ({match}) {
+  console.log({match});
 
-  handleUserinput (e) {
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({[name]: value},
-                  () => { this.validateField(name, value) });
-  }
-
-  validateField(fieldName, value) {
-  let fieldValidationErrors = this.state.formErrors;
-  let emailValid = this.state.emailValid;
-  let passwordValid = this.state.passwordValid;
-
-  switch(fieldName) {
-    case 'email':
-      emailValid = value.length > 0;
-      fieldValidationErrors.email = emailValid ? '' : ' is invalid';
-      break;
-    case 'password':
-      passwordValid = value.length >= 6;
-      fieldValidationErrors.password = passwordValid ? '': ' is too short';
-      break;
-    default:
-      break;
-  }
-  this.setState({formErrors: fieldValidationErrors,
-                  emailValid: emailValid,
-                  passwordValid: passwordValid
-                }, this.validateForm);
-}
-
-validateForm() {
-  this.setState({formValid: this.state.emailValid && this.state.passwordValid});
-}
-
-
-  render() {
-    return (
-      <article className Panel>
-        <form action="" method="post">
-          <h3>Create a new project</h3>
-          <div className="input-module">
-            <label htmlFor="project-title">Project Title</label>
-            <input type="text" name="project-title"></input>
-          </div>
-
-          <div className="input-module">
-            <label htmlFor="project-description">Description</label>
-            <textarea name="project-description"></textarea>
-          </div>
-
-          <div className="input-module">
-            <label htmlFor="project-title">Category</label>
-            <select class="" name="">
-              <option class="" value="option">Web</option>
-              <option class="" value="option">Industrial</option>
-              <option class="" value="option">Personal</option>
-              <option class="" value="option">Thoughts</option>
-            </select>
-          </div>
-
-          <div className="input-module">
-            <label htmlFor="project-title">Project Title</label>
-            <input type="text" name="project-title"></input>
-          </div>
-
-          <button type="submit">Submit</button>
-
-        </form>
-      </article>
-    )
-  }
-
+  return (
+    <main>
+      <h2 className="mobile-text">Admin</h2>
+      <Link to={`{match.url}/register`}>Register</Link>
+    </main>
+  )
 }
 
 export default Admin
