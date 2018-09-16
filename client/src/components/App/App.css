@@ -95,25 +95,41 @@ label{
   margin-top: calc( 3 * var(--base-unit));
   font-weight: bold;
 }
-input{
-  color: var(--text-color);
+
+input, textarea, select{
   padding: calc(2 * var(--base-unit));
-  border: none;
+  color: var(--text-color);
   background: var(--light-gray);
-  margin-top: calc( 3 * var(--base-unit));
-  line-height: 1rem;
+  border: none;
+  line-height: 1.5rem;
   font-size: 1rem;
+  margin-top: calc( 2 * var(--base-unit));
+  width: 60%;
+}
+
+input{
+  line-height: 1rem;
 }
 
 textarea{
-  color: var(--text-color);
-  border: none;
-  background: var(--light-gray);
   width: calc( 100% - calc(4 * var(--base-unit)));
   height: calc( 34 * var(--base-unit));
-  padding: calc(2 * var(--base-unit));
-  margin-top: calc( 3 * var(--base-unit));
   resize: none;
+}
+
+select{
+  height: 34px;
+}
+
+button{
+  padding: calc(2 * var(--base-unit));
+  color: var(--text-color);
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-weight: bold;
   line-height: 1.5rem;
   font-size: 1rem;
+  margin-top: calc( 8 * var(--base-unit));
+  border-radius: var(--base-unit)
 }
