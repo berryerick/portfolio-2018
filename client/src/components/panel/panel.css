@@ -12,31 +12,29 @@ div.panel-image{
   /* display: relative; */
   /* opacity: 1; */
 }
+/* @keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} */
 
 Article img{
   width: 100%;
   height: auto;
   opacity: 1;
   margin-top: calc(3 * var(--base-unit));
-  /* animation: expandDown 5s cubic-bezier(0.65, 0.05, 0.36, 1) ; */
-
+  /* animation: fade 1s cubic-bezier(0.65, 0.05, 0.36, 1); */
+  /* animation-delay: 3s; */
 }
 
-@keyframes expandDown {
-    from {
-      /* height: 0; */
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
+
 
 div.panel-links{
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
+  height: calc(13 * var(--base-unit));
   display: flex;
   justify-content: flex-end;
-  padding: 0 8px;
+  margin-top: calc(-13 * var(--base-unit));
+  z-index: 2
 }
 
 a.panel-link {

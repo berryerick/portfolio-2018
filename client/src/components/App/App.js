@@ -6,12 +6,22 @@ import {
 } from 'react-router-dom'
 
 import './App.css';
-import './typebase.css';
-import Panel from './components/panel/panel.js'
+import '../../resources/typebase.css';
+import Panel from '../Panel/Panel.js'
+import Admin from '../Admin/Admin.js'
 
-
+const Home = () => (
+  <main className="">
+    <h2 className="mobile-text">home</h2>
+    <Panel/>
+    <Panel/>
+    <Panel/>
+    <Panel/>
+  </main>
+)
 
 class App extends Component {
+
   render() {
     return (
       <Router>
@@ -25,22 +35,18 @@ class App extends Component {
           <nav>
             <div className="mobile-text no-scroll">
               <ul>
+                <li><Link to="/">Home</Link></li>
                 <li><Link to="/Web">Web</Link></li>
                 <li><Link to="/Industrial">Industrial</Link></li>
                 <li><Link to="/Personal">Personal</Link></li>
-                <li><Link to="/This">Personal</Link></li>
-                <li><Link to="/This">Personal</Link></li>
+                <li><Link to="/thoughts">Thoughts</Link></li>
               </ul>
             </div>
           </nav>
 
-          <main className="">
-            <h2 className="mobile-text">Projects</h2>
-            <Panel/>
-            <Panel/>
-            <Panel/>
-            <Panel/>
-          </main>
+          <Route exact path="/" component={Home}/>
+          <Route path="/admin" component={Admin}/>
+
         </div>
       </Router>
     );

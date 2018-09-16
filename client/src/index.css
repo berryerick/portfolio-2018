@@ -1,5 +1,16 @@
+*{
+  --base-unit: 4px;
+  --mobile-text-margin: calc(2 * var(--base-unit));
+  --text-color: #444;
+  --primary-color: #356;
+  --secondary-color: #245;
+  --light-gray: #ddd;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  color: var(--text-color);
 }
